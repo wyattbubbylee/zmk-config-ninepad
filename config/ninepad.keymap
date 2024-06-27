@@ -1,30 +1,28 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-                label = "ninepad";
-		
-                default_layer {
-                label = "Default";
-                	bindings = <
-                    &kp KP_N7 &kp KP_N8 &mo 1
-                    &kp KP_N4 &kp KP_N5 &kp KP_N6
-                    &kp KP_N1 &kp KP_N2 &kp KP_N3
+    keymap {
+        compatible = "zmk,keymap";
+        label = "ninepad";
 
-                        >;
-                };
-
-                bt_layer {
-                label = "bt";
-                	bindings = <
-                    &none &none &bootloader
-                    &none &none &bt BT_CLR
-                    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2
-                        >;
-                };
-
+        default_layer {
+            label = "Default";
+            bindings = <
+&kp N7        &kp N8        &mo 1
+&kp NUMBER_4  &kp N5        &kp KP_N6
+&kp NUMBER_1  &kp NUMBER_2  &kp KP_N3
+            >;
         };
+
+        bt_layer {
+            label = "bt";
+            bindings = <
+&none         &none         &bootloader
+&none         &none         &bt BT_CLR
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+            >;
+        };
+    };
 };
