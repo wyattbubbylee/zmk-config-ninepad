@@ -3,4 +3,7 @@ if SHIELD_NINEPAD
 config ZMK_KEYBOARD_NAME
     default "Ninepad"
 
+config USB_DEVICE_MANUFACTURER
+    default "Waylon Walker"
+
 endif
