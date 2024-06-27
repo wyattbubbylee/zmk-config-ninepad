@@ -8,7 +8,32 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI7_7";
             #binding-cells = <0>;
-            bindings = <&kp LG(N7)>, <&kp N7>;
+            bindings = <&kp N7>, <&kp LG(N7)>;
+        };
+
+        lgui3_media: lgui3_media {
+            compatible = "zmk,behavior-tap-dance";
+            label = "LGUI3_MEDIA";
+            #binding-cells = <0>;
+            bindings = <&kp LG(NUMBER_3)>, <&to 1>, <&kp K_PLAY_PAUSE>;
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        test {
+            bindings = <&hi_hello>;
+            key-positions = <5 4 3>;
+        };
+    };
+
+    macros {
+        hi_hello: test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp &kp H &kp I &kp SPACE &kp H &kp E &kp L &kp L &kp O>;
+            label = "TEST";
         };
     };
 
@@ -19,9 +44,17 @@
         default_layer {
             label = "Default";
             bindings = <
-&lgui7_7      &kp N8        &mo 1
+&lgui7_7      &kp N8        &mo 2
 &kp NUMBER_4  &kp N5        &kp NUMBER_6
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+&kp NUMBER_1  &kp NUMBER_2  &lgui3_media
+            >;
+        };
+
+        media {
+            bindings = <
+&kp K_PREVIOUS    &kp K_VOL_UP  &kp RS(K_NEXT)
+&kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
+&to 0             &trans        &trans
             >;
         };
 
