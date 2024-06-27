@@ -38,7 +38,7 @@
             bindings = <
 &kp K_PREVIOUS    &kp K_VOL_UP  &kp RS(K_NEXT)
 &kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
-&to 0             &hi_hello     &hi_hello
+&to 0             &trans        &trans
             >;
         };
 
