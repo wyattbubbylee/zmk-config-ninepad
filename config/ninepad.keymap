@@ -19,14 +19,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        test {
-            bindings = <&hi_hello>;
-            key-positions = <5 4 3>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         hi_hello: test {
@@ -54,7 +47,7 @@
             bindings = <
 &kp K_PREVIOUS    &kp K_VOL_UP  &kp RS(K_NEXT)
 &kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
-&to 0             &trans        &trans
+&to 0             &hi_hello     &hi_hello
             >;
         };
 
