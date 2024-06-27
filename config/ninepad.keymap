@@ -21,15 +21,6 @@
 
     combos { compatible = "zmk,combos"; };
 
-    macros {
-        hi_hello: test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp &kp H &kp I &kp SPACE &kp H &kp E &kp L &kp L &kp O>;
-            label = "TEST";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         label = "ninepad";
