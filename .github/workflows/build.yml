@@ -19,7 +19,7 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: firmware
-          path: ./firmware
+          path: ./firmware.zip
 
       - name: Create GitHub Release
         uses: actions/create-release@v1
