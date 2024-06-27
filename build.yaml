@@ -17,5 +17,5 @@
 #     artifact-name: corne_left_with_logging
 #
 include:
-  - board: nice60
+  - board: adafruit_kb2040
     shield: ninepad
