@@ -1,11 +1,11 @@
- #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &default_kscan;
         zmk,matrix_transform = &default_transform;
-	/delete-property/ zephyr,console;
-	/delete-property/ zephyr,shell-uart;
+        /delete-property/ zephyr,console;
+        /delete-property/ zephyr,shell-uart;
     };
 
     default_kscan: kscan {
@@ -20,7 +20,7 @@
             ;
 
         row-gpios
-            = <&gpio0 4  (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            = <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             , <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
@@ -36,5 +36,5 @@
             RC(2,0) RC(2,1) RC(2,2)
         >;
     };
-
 };
+
