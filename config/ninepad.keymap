@@ -34,7 +34,7 @@
             bindings = <
 &none  &none        &none
 &none  &bootloader  &none
-&none  &to 1        &none
+&none  &lt 1 SPACE  &none
             >;
         };
 
