@@ -1,6 +1,11 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+
+&bootloader {
+};
+
+&lt {
+};
 
 / {
     behaviors {
@@ -15,7 +20,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI3_MEDIA";
             #binding-cells = <0>;
-            bindings = <&kp LG(NUMBER_3)>, <&to 1>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp LG(NUMBER_3)>, <&to 0>, <&kp K_PLAY_PAUSE>;
         };
     };
 
@@ -25,29 +30,20 @@
         compatible = "zmk,keymap";
         label = "ninepad";
 
+        Boot {
+            bindings = <
+&none  &none        &none
+&none  &bootloader  &none
+&none  &lt 1 A      &none
+            >;
+        };
+
         default_layer {
             label = "Default";
             bindings = <
-&lgui7_7      &kp N8        &mo 2
-&kp NUMBER_4  &kp N5        &kp NUMBER_6
-&kp NUMBER_1  &kp NUMBER_2  &lgui3_media
-            >;
-        };
-
-        media {
-            bindings = <
-&kp K_PREVIOUS    &kp K_VOL_UP  &kp RS(K_NEXT)
-&kp K_PLAY_PAUSE  &kp K_VOL_DN  &trans
-&to 0             &trans        &trans
-            >;
-        };
-
-        bt_layer {
-            label = "bt";
-            bindings = <
-&bootloader   &none         &bootloader
-&none         &kp A         &bt BT_CLR
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2
+&kp ESC  &kp F5  &kp T
+&kp E    &kp W   &kp F
+&kp A    &kp S   &kp D
             >;
         };
     };
