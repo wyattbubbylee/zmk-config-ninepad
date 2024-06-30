@@ -34,16 +34,16 @@
             bindings = <
 &none  &none        &none
 &none  &bootloader  &none
-&none  &lt 1 A      &none
+&none  &to 1        &none
             >;
         };
 
         default_layer {
             label = "Default";
             bindings = <
-&kp ESC  &kp F5  &kp T
-&kp E    &kp W   &kp F
-&kp A    &kp S   &kp D
+&kp ESC  &lt 0 F5  &kp T
+&kp E    &kp W     &kp F
+&kp A    &kp S     &kp D
             >;
         };
     };
