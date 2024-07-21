@@ -41,9 +41,9 @@
         default_layer {
             label = "Default";
             bindings = <
-&kp ESC  &lt 0 F5  &kp T
-&kp E    &kp W     &kp F
-&kp A    &kp S     &kp D
+&kp ESC  &kp TAB  &kp T
+&kp Q    &kp W    &kp E
+&kp A    &kp S    &kp D
             >;
         };
     };
