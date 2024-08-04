@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 &bootloader {
 };
@@ -44,6 +45,14 @@
 &kp ESC  &kp TAB  &kp T
 &kp Q    &kp W    &kp E
 &kp A    &kp S    &kp D
+            >;
+        };
+
+        layer_2 {
+            bindings = <
+&trans          &trans  &trans
+&kp LEFT_ARROW  &kp W   &mkp RCLK
+&kp A           &kp S   &kp D
             >;
         };
     };
