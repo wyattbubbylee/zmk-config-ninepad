@@ -21,7 +21,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "LGUI3_MEDIA";
             #binding-cells = <0>;
-            bindings = <&kp LG(N3)>, <&to 0>, <&kp K_PLAY_PAUSE>;
+            bindings = <&kp LG(NUMBER_3)>, <&to 0>, <&kp K_PLAY_PAUSE>;
         };
     };
 
@@ -39,13 +39,21 @@
             >;
         };
 
-        layer_1 {
-            label = "Layer 1";
+        default_layer {
+            label = "Default";
+            bindings = <
+&kp ESC  &kp TAB  &kp T
+&kp Q    &kp W    &kp E
+&kp A    &kp S    &kp D
+            >;
+        };
+
+        layer_2 {
             bindings = <
 &kp MS_LEFT  &kp MS_UP    &kp MS_RIGHT
-&kp LEFT    &kp W     &kp MS_BTN2
-&kp A       &kp S     &kp D
+&kp LEFT_ARROW  &kp W     &kp RCLK
+&kp A           &kp S     &kp D
             >;
         };
     };
-};
+}
