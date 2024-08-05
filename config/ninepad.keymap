@@ -39,20 +39,12 @@
             >;
         };
 
-        default_layer {
-            label = "Default";
+        layer_1 {
+            label = "Layer 1";
             bindings = <
-&kp ESC  &kp TAB  &kp T
-&kp Q    &kp W    &kp E
-&kp A    &kp S    &kp D
-            >;
-        };
-
-        layer_2 {
-            bindings = <
-&trans          &trans  &trans
-&kp LEFT_ARROW  &kp W   &mkp RCLK
-&kp A           &kp S   &kp D
+&kp MS_LEFT  &kp MS_UP    &kp MS_RIGHT
+&kp LEFT_ARROW  &kp W     &kp RCLK
+&kp A           &kp S     &kp D
             >;
         };
     };
